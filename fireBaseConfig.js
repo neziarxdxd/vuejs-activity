@@ -20,15 +20,13 @@ function clickMe(){
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 	// This is for storing data
-	var x = {
-		title: id,
-		name: name, 
+	var x = {name: name, 
 		date:date,
 		 time: time
 		}
 	// child (is the primary key )
 	// set is for Insert Text
-	firebaseRef.child().set(x);
+	firebaseRef.child(id).set(x);
 }
 
 function RemoveMe(){
@@ -59,14 +57,12 @@ specRef.once("value").then(function(snapshot) {
 	  var date= snap.child("date").val();
 	  var time = snap.child("time").val();
 	  console.log(name,time,date)
-	  $('#testing').append(
-	  '<div class="col-sm-4"><div class="card" style="width: 18rem;">'+
-	  '<img src="..." class="card-img-top" alt="...">'+
-	  '<div class="card-body">'+
-	  '<h5 class="card-title">'+name+'</h5>'+
-	  '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>'
-	  +'</div></div></div> ');
-	  
+	 $("#table_body").append("<tr><td>"+name+"</td><td>"+date+"</td><td>"+time+"</td></tr>");
   });
 
-  
+
+
+
+
+ 
+
