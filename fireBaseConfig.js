@@ -77,7 +77,7 @@ specRef.once("value").then(function(snapshot) {
 		console.log("SUCCESS");
 		clearInterval();
 	}
-
+//added
 
 
 
