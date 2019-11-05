@@ -59,6 +59,25 @@ specRef.once("value").then(function(snapshot) {
 	  console.log(name,time,date)
 	 $("#table_body").append("<tr><td>"+name+"</td><td>"+date+"</td><td>"+time+"</td></tr>");
   });
+  var progNum=0;
+  function move(){
+	
+	
+	
+	progNum=progNum+40;
+		
+	
+
+  }
+  var elem = $('.progress-bar');
+  if (progNum <=100){
+	elem.css('width',progNum+'%');
+	elem.attr('aria-valuenow',progNum);}
+	else{
+		console.log("SUCCESS");
+		clearInterval();
+	}
+
 
 
 
