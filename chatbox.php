@@ -7,8 +7,10 @@
 </head>
 <body>
     <h1>CHATBOX</h1>
+    
     <form action="sendmessage.php" method="POST">
-    <input type="text" name="message">
+    <input type=text name = "text" placeholder="username">
+    <input type="text" name="message" placeholder="message">
     <input type="submit">
     </form>
 </body>
