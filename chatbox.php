@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>CHATBOX</h1>
+    <form action="sendmessage.php" method="POST">
+    <input type="text" name="message">
+    <input type="submit">
+    </form>
 </body>
 </html>
