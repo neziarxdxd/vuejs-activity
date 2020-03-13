@@ -1,6 +1,6 @@
 # HANDY PHOENIX
 Working in progress 
-<!-- content here -->
+
 ```
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
