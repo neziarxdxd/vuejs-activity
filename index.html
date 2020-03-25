@@ -16,7 +16,13 @@
 </head>
 <body>
     <div id="app">
+        <input v-model="txt_Task">
+        
         <h1>{{message.head}}</h1>
+        <button v-on:click="insertData">Add</button>
+        <div>
+            {{txt_Task}}
+        </div>
         <ul>
             <li v-for="todo in todos">
                 {{todo.text}}
