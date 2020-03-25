@@ -11,6 +11,11 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        .taposna{
+
+            
+        }
     </style>
 
 </head>
@@ -25,10 +30,9 @@
             {{txt_Task}}
         </div>
         <ul>
-            <li v-for="(todo,index) in todos">
+            <li v-for="(todo,index) in todos" >
                
-                <input type="text"  value="{{todo.text}}">
-                 <button>Done</button><button v-on:click="deleteData(index)">Delete</button>
+                {{todo.text}} <button v-on:click="doneData(index,todo)">Done</button><button v-on:click="deleteData(index)">Delete</button>
 
             </li>
         </ul>

@@ -21,9 +21,9 @@ var app = new Vue({
           this.todos.splice(index,1)          
         },
 
-        updateData:function(index,value){
-          app.$set(app.todos, index,{text:value})
-
+        doneData:function(i,task){
+          
+            
         }       
         
     }
