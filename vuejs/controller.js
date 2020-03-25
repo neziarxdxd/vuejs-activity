@@ -7,14 +7,13 @@ var app = new Vue({
        
     },
     todos: [
-        { text: 'Learn JavaScript' },
-        { text: 'Learn Vue' },
-        { text: 'Build something awesome' }
+       
       ]
     },
     methods:{
         insertData:function(){
             app.todos.push({text:this.txt_Task})
+            this.txt_Task=""
         }
     }
 
