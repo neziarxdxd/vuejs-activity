@@ -2,7 +2,7 @@ var app = new Vue({
     el:'#app',
     data:{
     message: {
-        m: 'Raizen',
+       head: 'TODO APPLICATION',
        
     },
     todos: [
@@ -16,10 +16,12 @@ var app = new Vue({
 var app2 = new Vue({
     el:'#app-4',
     data: {
+        title: "PROGRAMMING THE BEST",
         todos:[
             {text: 'Java'},
             {text:'C#'},
             {text:'Python'}
         ]
+
     }
 })

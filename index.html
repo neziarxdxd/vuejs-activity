@@ -15,9 +15,8 @@
 
 </head>
 <body>
- 
-
     <div id="app">
+        <h1>{{message.head}}</h1>
         <ul>
             <li v-for="todo in todos">
                 {{todo.text}}
@@ -27,10 +26,8 @@
     </div>
 
    <div id="app-4">
-    <ol> 
-        <h1>
-            {{todos}}
-        </h1>
+    <h1>{{title}}</h1>
+    <ol>       
         <li v-for="todo in todos">
             {{ todo.text }} 
         </li>
