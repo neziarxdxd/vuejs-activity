@@ -1,10 +1,10 @@
-# HANDY PHOENIX
+# VUE JS ACTIVITY
 Working in progress 
 <!-- lock down kami nakakatamad-->
 ```
 MIT License
 
-Copyright (c) 2019 Raizen
+Copyright (c) 2020 Raizen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
