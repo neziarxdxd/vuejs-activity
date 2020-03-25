@@ -2,6 +2,7 @@ var app = new Vue({
     el:'#app',
     data:{
     txt_Task:'',
+    markup:'itdone',
     message: {
        head: 'TODO APPLICATION',
        
@@ -10,9 +11,11 @@ var app = new Vue({
        
       ]
     },
+
     methods:{
         insertData:function()
         {
+          ''
             app.todos.push({text:this.txt_Task})
             this.txt_Task=""
         },
@@ -22,6 +25,7 @@ var app = new Vue({
         },
 
         doneData:function(i,task){
+          this.markup="ditapos"
           
             
         }       

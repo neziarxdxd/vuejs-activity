@@ -12,9 +12,11 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .taposna{
-
-            
+        .itdone{
+            color:red;            
+        }
+        .ditapos{
+            background-color: aqua;
         }
     </style>
 
@@ -30,9 +32,11 @@
             {{txt_Task}}
         </div>
         <ul>
-            <li v-for="(todo,index) in todos" >
-               
-                {{todo.text}} <button v-on:click="doneData(index,todo)">Done</button><button v-on:click="deleteData(index)">Delete</button>
+            <li v-for="(todo,index) in todos" v-bind:class="markup" >
+              
+                {{todo.text}}
+           
+                <button v-on:click="doneData(index,todo)">Done</button><button v-on:click="deleteData(index)">Delete</button>
 
             </li>
         </ul>
