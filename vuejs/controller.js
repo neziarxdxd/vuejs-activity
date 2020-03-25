@@ -19,7 +19,13 @@ var app = new Vue({
         deleteData:function(index)
         {
           this.todos.splice(index,1)          
-        }
+        },
+
+        updateData:function(index,value){
+          app.$set(app.todos, index,{text:value})
+
+        }       
+        
     }
 
    
