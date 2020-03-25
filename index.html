@@ -16,16 +16,18 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="txt_Task">      
+           
         
         <h1>{{message.head}}</h1>
+        <input type="text" v-model="txt_Task">
         <button v-on:click="insertData">Add</button>
+
         <div>
             {{txt_Task}}
         </div>
         <ul>
             <li v-for="todo in todos">
-                {{todo.text}}
+                {{todo.text}} <button>Add</button><button>Add</button>
 
             </li>
         </ul>
