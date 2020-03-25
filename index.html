@@ -15,20 +15,21 @@
 
 </head>
 <body>
-   <div id="app">
-    <h1>{{message.m}}</h1> 
-    <h2>{{message.todos}}</h2>  
-    
-   </div>
+ 
 
 
-   <div id="app">
+   <div id="app-4">
     <ol> 
-        <li v-for="todo in {{message.todos}}">
-            {{ todo.x }} 
+        <h1>
+            {{todos}}
+        </h1>
+        <li v-for="todo in todos">
+            {{ todo.text }} 
         </li>
     </ol>
     </div>
+
+
    
  
    <script src="vuejs/controller.js"></script>

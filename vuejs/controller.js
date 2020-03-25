@@ -3,22 +3,23 @@ var app = new Vue({
     data:{
     message: {
         m: 'Raizen',
-        todos:[
-            {x: 'Java'},
-            {x:'C#'},
-            {x:'Python'} 
-        ]
-    }
+       
+    },
+    todos: [
+        { text: 'Learn JavaScript' },
+        { text: 'Learn Vue' },
+        { text: 'Build something awesome' }
+      ]
     }
 })
 
-// var app2 = new Vue({
-//     el:'app-4',
-//     data: {
-//         todos:[
-//             {text: 'Java'},
-//             {text:'C#'},
-//             {text:'Python'}
-//         ]
-//     }
-// })
+var app2 = new Vue({
+    el:'#app-4',
+    data: {
+        todos:[
+            {text: 'Java'},
+            {text:'C#'},
+            {text:'Python'}
+        ]
+    }
+})
