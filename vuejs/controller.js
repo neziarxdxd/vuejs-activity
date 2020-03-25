@@ -11,9 +11,14 @@ var app = new Vue({
       ]
     },
     methods:{
-        insertData:function(){
+        insertData:function()
+        {
             app.todos.push({text:this.txt_Task})
             this.txt_Task=""
+        },
+        deleteData:function(index)
+        {
+          this.todos.splice(index,1)          
         }
     }
 
