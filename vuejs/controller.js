@@ -8,6 +8,7 @@ var app = new Vue({
        
     },
     todos: [
+
        
       ]
     },
@@ -16,7 +17,7 @@ var app = new Vue({
         insertData:function()
         {
           
-            app.todos.push({text:this.txt_Task})
+            app.todos.push({text:this.txt_Task,done:false})
             this.txt_Task=""
         },
         deleteData:function(index)
@@ -25,7 +26,7 @@ var app = new Vue({
         },
 
         doneData:function(todo){
-          todo.done = !todo.done;
+          todo.done =true;
           
             
         }       
