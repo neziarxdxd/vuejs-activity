@@ -15,7 +15,7 @@
         .itdone{
             color:red;            
         }
-        .ditapos{
+        .list-group .list-group-item.disabled{
             background-color: aqua;
         }
     </style>
@@ -31,12 +31,12 @@
         <div>
             {{txt_Task}}
         </div>
-        <ul>
-            <li v-for="(todo,index) in todos" v-bind:class="markup" >
+        <ul class="list-group">
+            <li  class="list-group-item"  v-for="(todo,index) in todos" :class="{'disabled' : todo.done}" >
               
                 {{todo.text}}
            
-                <button v-on:click="doneData(index,todo)">Done</button><button v-on:click="deleteData(index)">Delete</button>
+                <button  v-on:click="doneData(todo) ">Done</button><button v-on:click="deleteData(index)">Delete</button>
 
             </li>
         </ul>
