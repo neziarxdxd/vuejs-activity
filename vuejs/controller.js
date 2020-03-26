@@ -16,10 +16,14 @@ var app = new Vue({
     methods:{
         insertData:function()
         {
-          
+            if (this.txt_Task==""){
+              alert("Fill up first")
+            }
+            else{
             app.todos.push({text:this.txt_Task,done:false})
             this.txt_Task=""
-        },
+          }
+          },
         deleteData:function(index)
         {
           this.todos.splice(index,1)          

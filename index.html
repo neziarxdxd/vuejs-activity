@@ -11,10 +11,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        .itdone{
-            color:red;            
-        }
+        
         .list-group .list-group-item.disabled{
             text-decoration: line-through;
         }
@@ -22,38 +19,23 @@
 
 </head>
 <body>
-    <div id="app">         
-        
+    <div id="app">
         <h1>{{message.head}}</h1>
         <input type="text" v-model="txt_Task">
         <button v-on:click="insertData">Add</button>
-
         <div>
             {{txt_Task}}
         </div>
         <ul class="list-group">
             <li  class="list-group-item"  v-for="(todo,index) in todos" :class="{'disabled' : todo.done}" >
-              
-                {{todo.text}}
-           
+                {{todo.text}}           
                 <button  v-on:click="doneData(todo) ">Done</button><button v-on:click="deleteData(index)">Delete</button>
 
             </li>
         </ul>
     </div>
 
-   <div id="app-4">
-    <h1>{{title}}</h1>
-    <ol>       
-        <li v-for="todo in todos">
-            {{ todo.text }} 
-        </li>
-    </ol>
-    </div>
 
-
-   
- 
-   <script src="vuejs/controller.js"></script>
+    <script src="vuejs/controller.js"></script>
 </body>
 </html>
