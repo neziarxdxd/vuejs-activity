@@ -13,10 +13,16 @@
             font-family: Raleway;
         }
         .container{
-            padding: 30%;
-            
+            padding-left: 30%;
+            padding-right: 30%;
         }
 
+        .list-group .list-group-item{
+            background-color: #80b7eb;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-left: 20%;
+        }
        
         .list-group .list-group-item.disabled{
             text-decoration: line-through;
@@ -24,9 +30,11 @@
         .field-task{
             padding-top: 2.5%;
             padding-bottom: 2.5%;
+
         }
         .form-design-enter{
             padding-top:4%;
+            text-align: center;
         }
         .btn-action{
             margin-left: 3%;
@@ -35,6 +43,9 @@
             font-weight: bold;
 
         }
+        ul {
+        list-style-type: none;
+        }
 
     </style>
 
@@ -42,7 +53,7 @@
 <body>
     <div class="container">
         <div id="app">
-        <h1>{{message.head}}</h1>
+        <h1 style="text-align: center;">{{message.head}}</h1>
         
             <div class="form-design-enter">
             <input type="text" v-model="txt_Task" v-on:keyup.enter="insertData" class="border border-indigo-200">
@@ -53,9 +64,12 @@
             {{txt_Task}}
         </div>
         <ul class="list-group">
-            <li  class="list-group-item"  v-for="(todo,index) in todos" :class="{'disabled' : todo.done}" >
+            <li  v-for="(todo,index) in todos" style="padding-bottom: 1rem;">
+               <span class="list-group-item"  :class="{'disabled' : todo.done}" >
                 {{todo.text}} 
-                <span class="btn-action">        
+               </span>
+                
+            <span class="btn-action">        
                 <button  v-on:click="doneData(todo) ">Done</button>
             </span>  
             <span class="btn-action">
