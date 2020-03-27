@@ -15,13 +15,14 @@
         .container{
             padding-left: 30%;
             padding-right: 30%;
+            text-align: center;
+            
         }
 
-        .list-group .list-group-item{
+         .list-group-item{
             background-color: #80b7eb;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            padding-left: 20%;
+            padding-left: 50%;
+            padding-right: 50%;
         }
        
         .list-group .list-group-item.disabled{
@@ -30,11 +31,13 @@
         .field-task{
             padding-top: 2.5%;
             padding-bottom: 2.5%;
+            
 
         }
         .form-design-enter{
             padding-top:4%;
             text-align: center;
+            width: 100%;
         }
         .btn-action{
             margin-left: 3%;
@@ -44,7 +47,8 @@
 
         }
         ul {
-        list-style-type: none;
+            list-style: none;
+  padding-left: 0;
         }
 
     </style>
@@ -53,33 +57,33 @@
 <body>
     <div class="container">
         <div id="app">
-        <h1 style="text-align: center;">{{message.head}}</h1>
-        
+        <h1 style="text-align: center;">{{message.head}}</h1>        
             <div class="form-design-enter">
-            <input type="text" v-model="txt_Task" v-on:keyup.enter="insertData" class="border border-indigo-200">
-        </div>
-
-        
-        <div>
-            {{txt_Task}}
-        </div>
+                <input type="text"  v-model="txt_Task" v-on:keyup.enter="insertData" style="width: 100%;">
+            </div>       
+            <div>
+                {{txt_Task}}
+            </div>
         <ul class="list-group">
-            <li  v-for="(todo,index) in todos" style="padding-bottom: 1rem;">
+            <li  v-for="(todo,index) in todos" style="padding-bottom: 1rem; width:100%;">
                <span class="list-group-item"  :class="{'disabled' : todo.done}" >
                 {{todo.text}} 
                </span>
                 
-            <span class="btn-action">        
+            <!-- <span class="btn-action">        
                 <button  v-on:click="doneData(todo) ">Done</button>
             </span>  
             <span class="btn-action">
                 <button v-on:click="deleteData(index)">Delete</button>
-            </span>
-            </li>
-        </ul>
+            </span> -->
+            <!-- last gagawin na talaga 'to bukas-->
+        </li>
+        </ul> 
+       </div>
     </div>
 
-</div>
+
+
     <script src="vuejs/controller.js"></script>
 </body>
 </html>
