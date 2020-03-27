@@ -5,37 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VUE JS PRACTICE</title>
     <script src="vuejs/vue.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
 
     </script>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
+        .container{
+            padding: 30%;
+            
         }
-        
+
+       
         .list-group .list-group-item.disabled{
             text-decoration: line-through;
         }
+        .field-task{
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+        }
+        .form-design-enter{
+            padding-top:4%;
+        }
+        .btn-action{
+            margin-left: 3%;
+        }
+
     </style>
 
 </head>
 <body>
-    <div id="app">
+    <div class="container">
+        <div id="app">
         <h1>{{message.head}}</h1>
-        <input type="text" v-model="txt_Task">
-        <button v-on:click="insertData">Add</button>
+        
+            <div class="form-design-enter">
+            <input type="text" v-model="txt_Task" v-on:keyup.enter="insertData" class="border border-indigo-200">
+        </div>
+
+        
         <div>
             {{txt_Task}}
         </div>
         <ul class="list-group">
             <li  class="list-group-item"  v-for="(todo,index) in todos" :class="{'disabled' : todo.done}" >
-                {{todo.text}}           
-                <button  v-on:click="doneData(todo) ">Done</button><button v-on:click="deleteData(index)">Delete</button>
-
+                {{todo.text}} 
+                <span class="btn-action">        
+                <button  v-on:click="doneData(todo) ">Done</button>
+            </span>  
+            <span class="btn-action">
+                <button v-on:click="deleteData(index)">Delete</button>
+            </span>
             </li>
         </ul>
     </div>
 
-
+</div>
     <script src="vuejs/controller.js"></script>
 </body>
 </html>
