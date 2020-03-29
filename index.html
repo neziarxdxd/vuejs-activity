@@ -21,8 +21,7 @@
 
          .list-group-item{
             background-color: #80b7eb;
-            padding-left: 50%;
-            padding-right: 50%;
+            
         }
        
         .list-group .list-group-item.disabled{
@@ -59,16 +58,16 @@
         <div id="app">
         <h1 style="text-align: center;">{{message.head}}</h1>        
             <div class="form-design-enter">
-                <input type="text"  v-model="txt_Task" v-on:keyup.enter="insertData" style="width: 100%;">
+                <input type="text"  v-model="txt_Task" v-on:keyup.enter="insertData" style="width: 100%; height:60px; padding-left: 2%; font-size: 2em;">
             </div>       
             <div>
                 {{txt_Task}}
             </div>
         <ul class="list-group">
             <li  v-for="(todo,index) in todos" style="padding-bottom: 1rem; width:100%;">
-               <span class="list-group-item"  :class="{'disabled' : todo.done}" >
+               <div class="list-group-item"  :class="{'disabled' : todo.done}" >
                 {{todo.text}} 
-               </span>
+               </div>
                 
             <!-- <span class="btn-action">        
                 <button  v-on:click="doneData(todo) ">Done</button>
