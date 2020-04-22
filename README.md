@@ -1,6 +1,6 @@
 # VUE JS ACTIVITY
 Working in progress 
-<!-- lock down kami nakakatamad-->
+<!-- lock down kami nakakatamad hay anyare-->
 ```
 MIT License
 
